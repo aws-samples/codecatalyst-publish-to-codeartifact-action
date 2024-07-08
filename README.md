@@ -1,11 +1,15 @@
-## My Project
+## Publish To AWS CodeArtifact Workflow File
 
-TODO: Fill this README out!
+You can see the workflow.yaml file to see the complete code for using this action.
 
-Be sure to:
+### How the "Publish to AWS CodeArtifact" action works:
 
-* Change the title in this README
-* Edit your repository description on GitHub
+The "Publish to AWS CodeArtifact" action works as follows at runtime:
+
+- Checks if the PackageFormat, PackagePath, RepositoryName, DomainName and AWSRegion is specified, validates the configuration, and configures AWS credentials based on the Environment, Connection, and Role specified.
+- Looks for package files to publish in the path configured in the PackagePath field in the WorkflowSource folder. If no source is configured in Sources, but an artifact is configured in Arifacts, then the action looks for the files in the configured artifact folder.
+- Publishes the package to AWS CodeArtifact.
+
 
 ## Security
 
